@@ -1,0 +1,14 @@
+<html>
+    {% if data.name %}
+        <title>Homebrew Package: {{ data.name }}</title>
+    {% else %}
+        <title>Homebrew Package</title>
+    {% endif %}
+
+    <body>
+        <b>Name</b>: {{ data.name }} <br>
+        <b>Description</b>: {{ data.description }} <br>
+        <b>Version</b>: {{ data.current_version }} <br>
+        <b>Catalina SHA256</b>: {{ data.hashes["catalina"] }} <br>
+    </body>
+</html>
